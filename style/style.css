@@ -1,11 +1,217 @@
+:root {
+  --black: #000000;
+  --blue: #3EA2D8;
+  --white: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+button {
+  color: var(--blue);
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "raleway";
+  font-weight: 900;
+}
+
+button {
+  font-family: "roboto";
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+  padding: 16px 60px;
+  border-radius: 28px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  opacity: 0.9;
+  position: relative;
+  overflow: hidden;
+}
+
+button:before {
+  content: "MORE";
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  background-color: var(--blue);
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transition: all ease 0.5s;
+  transition: all ease 0.5s;
+  -webkit-box-shadow: 0 0 30px 30px var(--blue);
+          box-shadow: 0 0 30px 30px var(--blue);
+  z-index: -1;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+button:hover:before {
+  color: var(--white);
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  z-index: 1;
 }
 
 .wrapper {
   max-width: 1210px;
+  margin: 0 auto;
+  padding: 90px 0;
+}
+
+body {
+  background-color: var(--black);
+  font-family: "raleway";
+  font-weight: 400;
+  color: var(--white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  min-height: 100vh;
+}
+
+header {
+  width: 100%;
+  height: 100%;
+  background-image: url("../media/image/Image@2x.jpg");
+  background-position: top;
+  background-size: cover;
+}
+
+header .header-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .wrapper {
+  padding-top: 40px;
+}
+
+header .navigation {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .navigation .logo {
+  text-transform: uppercase;
+  font-family: "raleway";
+  color: var(--white);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navigation .logo .icon {
+  width: 36px;
+  height: 32px;
+  background-color: var(--blue);
+}
+
+header .navigation .logo h2 {
+  color: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+header .navigation .logo h3 {
+  color: inherit;
+  font-size: 8px;
+  line-height: 8px;
+  font-weight: 400;
+}
+
+header .navigation .logo span {
+  color: var(--blue);
+}
+
+header .navigation .menu-container ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 80px;
+}
+
+header .content-container {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-top: 295px;
+  padding-bottom: 160px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .content-container h1 {
+  font-size: 160px;
+  color: transparent;
+  overflow: hidden;
+}
+
+header .content-container p {
+  margin-top: 70px;
+}
+
+header .content-container button {
+  margin-top: 100px;
 }
 /*# sourceMappingURL=style.css.map */
