@@ -325,16 +325,38 @@ main {
         padding: 70px 90px;
         text-align: center;
 
-        h2 {}
+        h2 {
+            margin-bottom: 30px;
+        }
 
         p {
-            margin-top: 30px;
             line-height: 2.1rem;
             font-size: 1.1rem;
         }
         
         @media (max-width: 425px) {
             padding: 50px 30px;
+        }
+    }
+
+
+
+    .card__container {
+        background-color: var(--darkGray);
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            text-align: center;
+            gap: 40px;
+        }
+        .trips_date {
+            font-weight: 500;
+            line-height: 1.8rem;
+            & > span::before {
+                content: "Trips / "
+            }
         }
     }
 }
@@ -407,8 +429,11 @@ footer {
     }
 
     .about__item_nav {
-        display: flex;
-        flex-direction: column;
+        margin: 0 auto;
+        div {
+            display: flex;
+            flex-direction: column;
+        }
         h3 {
             margin-bottom: 40px;
         }

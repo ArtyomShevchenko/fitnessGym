@@ -21,3 +21,12 @@ document.body.addEventListener("click", (event) => {
     }
 
 });
+
+// trips date
+const outDateTrips = document.querySelectorAll(".trips_date>span");
+const showDate = new Date();
+outDateTrips.forEach(element => {
+    element.innerText = showDate.toDateString();
+});
+
+console.log(showDate.toDateString());
