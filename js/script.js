@@ -25,8 +25,7 @@ document.body.addEventListener("click", (event) => {
 // trips date
 const outDateTrips = document.querySelectorAll(".trips_date>span");
 const showDate = new Date();
-outDateTrips.forEach(element => {
-    element.innerText = showDate.toDateString();
-});
 
-console.log(showDate.toDateString());
+outDateTrips.forEach(element => {
+    element.innerText = `${showDate.getDate()}th ${showDate.toDateString().slice(4,7)}, ${showDate.getFullYear()}`;
+});

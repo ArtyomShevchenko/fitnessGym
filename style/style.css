@@ -26,12 +26,10 @@ button {
 .scroll__top {
   position: fixed;
   bottom: 20px;
-  left: 50%;
+  right: 10%;
   z-index: 20;
   opacity: 1;
   display: none;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
 }
 
 .scroll__top span {
@@ -390,6 +388,68 @@ main .quoet__container .wrapper p {
   }
 }
 
+main .projects__container {
+  color: var(--blue);
+}
+
+main .projects__container .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 220px 40px;
+  padding: 200px 0;
+}
+
+main .projects__container .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .projects__container .card:nth-child(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+main .projects__container .content {
+  max-width: 380px;
+  text-align: center;
+}
+
+main .projects__container .content h3 {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+main .projects__container .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .projects__container .icon img {
+  width: 120px;
+  height: 120px;
+}
+
 main .card__container {
   background-color: var(--darkGray);
 }
@@ -406,17 +466,29 @@ main .card__container .wrapper {
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-align: center;
   gap: 40px;
 }
 
-main .card__container .trips_date {
-  font-weight: 500;
-  line-height: 1.8rem;
+main .card__container h3 {
+  color: var(--white);
+  margin-bottom: 30px;
 }
 
+main .card__container .card,
+main .card__container .trips_date {
+  max-width: 300px;
+  font-weight: 500;
+  line-height: 1.8rem;
+  text-align: start;
+}
+
+main .card__container .card > span::before,
 main .card__container .trips_date > span::before {
   content: "Trips / ";
+}
+
+main .card__container .trips_date {
+  text-align: center;
 }
 
 footer {
