@@ -680,7 +680,7 @@ main .exactly_we_do__block .card__container_gallary {
 main .exactly_we_do__block .card__container_gallary .card {
   width: 48%;
   max-width: 50%;
-  height: 240px;
+  height: 380px;
   padding: 0;
 }
 
@@ -695,6 +695,98 @@ main .exactly_we_do__block .card__container_gallary .card img {
 
 main .exactly_we_do__block .card__container_hidden {
   display: none;
+}
+
+main .tickets__shop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+main .tickets__shop section {
+  position: relative;
+  min-height: 680px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 100px;
+  color: var(--blue);
+}
+
+main .tickets__shop section img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .tickets__shop section .wrapper {
+  max-width: 450px;
+  margin: 0;
+  margin-right: auto;
+}
+
+main .tickets__shop section h2 {
+  font-size: 30px;
+  line-height: 70px;
+  color: inherit;
+  font-weight: 400;
+}
+
+main .tickets__shop section p {
+  line-height: 1.5rem;
+  color: inherit;
+  letter-spacing: 0.1rem;
+}
+
+main .tickets__shop section:last-of-type {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+
+main .tickets__shop section:last-of-type img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+main .tickets__shop section:last-of-type .wrapper {
+  max-width: 280px;
+  margin: 0;
+  margin-left: auto;
+  color: var(--white);
+}
+
+main .tickets__shop section:last-of-type h2,
+main .tickets__shop section:last-of-type p {
+  color: inherit;
+}
+
+main .tickets__shop section:last-of-type h2 {
+  font-size: 40px;
+  line-height: 1em;
+}
+
+main .tickets__shop section:last-of-type p {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+main .tickets__shop section:last-of-type button::before {
+  content: "buy";
 }
 
 main .projects__container {
