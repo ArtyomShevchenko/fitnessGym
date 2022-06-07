@@ -38,3 +38,26 @@ const showDate = new Date();
 outDateTrips.forEach(element => {
     element.innerText = `${showDate.getDate()}th ${showDate.toDateString().slice(4, 7)}, ${showDate.getFullYear()}`;
 });
+
+// navigation__switch__card
+const switchLinks = document.querySelectorAll(".switch__card__link");
+const switchCards = document.querySelectorAll(".cards_case");
+
+switchLinks.forEach(element => {
+    element.dataset.case = String(element.textContent).toLowerCase();
+
+    element.addEventListener("click", () => {
+        switchCards.forEach(card => {
+            card.style.display = "none";
+            if(card.dataset.data === element.dataset.case) {
+                card.style.display = "flex";
+            }
+        })
+    })
+});
+
+
+
+// switchCards[0].style.display = "flex";
+
+console.log(switchCards[0])
