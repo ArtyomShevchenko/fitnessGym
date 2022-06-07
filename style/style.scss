@@ -29,6 +29,7 @@ button {
     z-index: 20;
     opacity: 1;
     display: none;
+
     // transform: translateX(-50%);
     span {
         background-color: transparent;
@@ -38,7 +39,7 @@ button {
         border-right: 20px;
         border-left: 20px;
         border-color: transparent;
-        border-bottom-color : var(--black);
+        border-bottom-color: var(--black);
         border-style: solid;
     }
 
@@ -64,6 +65,7 @@ button {
     opacity: 0.9;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 
     &:before {
         content: "MORE";
@@ -92,6 +94,35 @@ button:hover {
         color: var(--white);
         transform: translateX(0%);
         z-index: 1;
+    }
+}
+
+.social__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .social__link {
+        height: 36px;
+        width: 36px;
+        padding: 6px;
+        background-color: var(--white);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    a {
+        width: 100%;
+        height: 100%;
+    }
+
+    svg {
+        height: 100%;
+        width: 100%;
+        fill: var(--darkGray);
     }
 }
 
@@ -174,7 +205,7 @@ header {
         .menu__container {
             display: flex;
             align-items: center;
-            
+
             // overflow: hidden;
 
             .burger {
@@ -182,6 +213,7 @@ header {
             }
 
             .menu__content {
+
                 .menu__list {
                     display: flex;
                     gap: 30px;
@@ -193,6 +225,17 @@ header {
                     a {
                         color: var(--white);
                         text-transform: uppercase;
+                    }
+                }
+
+                .social__container_nav {
+                    display: none;
+                }
+
+                @media (max-width: 768px) {
+                    .social__container_nav {
+                        display: flex;
+                        margin-top: 30px;
                     }
                 }
             }
@@ -256,6 +299,9 @@ header {
                 }
 
                 .menu__content {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
                     position: absolute;
                     width: 100%;
                     height: 100%;
@@ -263,7 +309,7 @@ header {
                     top: 0;
                     right: 0;
                     background-color: var(--black);
-                    transform: translate(100%, -100%);
+                    transform: translate(-100%, 0);
                     transition: transform 0.2s;
 
                     .menu__list {
@@ -276,6 +322,10 @@ header {
                         li {
                             font-size: 2rem;
                         }
+                    }
+
+                    .social__container {
+                        justify-content: flex-end;
                     }
 
                 }
@@ -333,15 +383,78 @@ main {
             line-height: 2.1rem;
             font-size: 1.1rem;
         }
-        
+
         @media (max-width: 425px) {
             padding: 50px 30px;
         }
     }
 
+    .prioritets__container {
+        position: relative;
+        img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5) grayscale(1);
+        }
+
+        &>.wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-bottom: 120px;
+            color: var(--blue);
+            p:first-of-type {
+                margin-top: 80px;
+                font-size: 19px;
+                line-height: 38px;
+            }
+        }
+        .card__container {
+            margin-top: 80px;
+            background-color: rgba(0, 0, 0, 0);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            .card {
+                padding: 50px 80px 60px 80px;
+                background-color: #00000080;
+                max-width: 360px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                color: var(--white);
+                h3 {
+                    margin: 0;
+                }
+                p {
+                    font-family: "Lora";
+                    font-weight: 400;
+                    line-height: 1.1rem;
+                    font-size: 16px;
+                }
+                p:first-of-type {
+                    margin: 50px 0;
+                }
+            }
+        }
+        
+    }
 
     .projects__container {
         color: var(--blue);
+
         .wrapper {
             display: flex;
             flex-direction: column;
@@ -362,6 +475,7 @@ main {
         .content {
             max-width: 380px;
             text-align: center;
+
             h3 {
                 margin-top: 10px;
                 margin-bottom: 50px;
@@ -372,6 +486,7 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+
             img {
                 width: 120px;
                 height: 120px;
@@ -382,6 +497,7 @@ main {
 
     .card__container {
         background-color: var(--darkGray);
+
         .wrapper {
             display: flex;
             flex-direction: row;
@@ -389,17 +505,20 @@ main {
             justify-content: space-around;
             gap: 40px;
         }
+
         h3 {
             color: var(--white);
             margin-bottom: 30px;
         }
+
         .card,
         .trips_date {
             max-width: 300px;
             font-weight: 500;
             line-height: 1.8rem;
             text-align: start;
-            & > span::before {
+
+            &>span::before {
                 content: "Trips / "
             }
         }
@@ -412,22 +531,30 @@ main {
 
 footer {
     background-color: var(--darkGray);
-    h3, p, a {
+
+    h3,
+    p,
+    a {
         color: var(--white)
-    };
-    
+    }
+
+    ;
+
 
     .footer__container {}
 
     .wrapper {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+
         @media (max-width: 768px) {
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: repeat(2, 1fr);
+
             .about__item_social {
                 max-width: 100%;
                 padding-bottom: 40px;
+
                 &::after {
                     content: "";
                     display: block;
@@ -446,46 +573,21 @@ footer {
         flex-direction: column;
         gap: 20px;
         grid-column: 1/4;
-        position: relative; 
-        .social_container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-
-            .social__link {
-                height: 36px;
-                width: 36px;
-                padding: 6px;
-                background-color: var(--white);
-                border-radius: 50%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                overflow: hidden;
-            }
-
-            a {
-                width: 100%;
-                height: 100%;
-            }
-
-            svg {
-                height: 100%;
-                width: 100%;
-                fill: var(--darkGray);
-            }
-        }
+        position: relative;
     }
 
     .about__item_nav {
         margin: 0 auto;
+
         div {
             display: flex;
             flex-direction: column;
         }
+
         h3 {
             margin-bottom: 40px;
         }
+
         a {
             line-height: 1.5rem;
         }
