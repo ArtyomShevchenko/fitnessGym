@@ -218,12 +218,20 @@ header .navigation .logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-header .navigation .logo .icon {
+header .navigation .logo:before {
+  content: "";
   width: 36px;
-  height: 32px;
-  background-color: var(--blue);
+  height: 100%;
+  background-image: url("../media/image/oie_transparent.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 header .navigation .logo h2 {
@@ -665,7 +673,27 @@ main .exactly_we_do__block .card__container .card p:first-of-type {
   margin: 50px 0;
 }
 
-main .exactly_we_do__block .cards_case {
+main .exactly_we_do__block .card__container_gallary {
+  gap: 30px;
+}
+
+main .exactly_we_do__block .card__container_gallary .card {
+  width: 48%;
+  max-width: 50%;
+  height: 240px;
+  padding: 0;
+}
+
+main .exactly_we_do__block .card__container_gallary .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 0;
+  margin: 0;
+}
+
+main .exactly_we_do__block .card__container_hidden {
   display: none;
 }
 
