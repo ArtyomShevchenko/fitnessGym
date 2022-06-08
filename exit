@@ -1,0 +1,53 @@
+[33mcommit 385e26535256604a0887d82e0c9c8cfb4b0d8781[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;32mtest[m[33m)[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Tue Jun 7 18:25:36 2022 +0300
+
+    add .ticket__shop block in index.html
+
+[33mcommit 70480efb0aad9f496d04a2d3055e8447296e0c3a[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Tue Jun 7 16:53:36 2022 +0300
+
+    fix index.html
+
+[33mcommit 2fe95d5add47d9b008c0d83a38f0b432f4e63613[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Tue Jun 7 16:08:46 2022 +0300
+
+    add .exactly_we_do__block in index.html and configurate js for this block
+
+[33mcommit 94abd8303a03810a1a5f331bfea0e8cfbb895b27[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Tue Jun 7 14:39:54 2022 +0300
+
+    add .prioritets__container in index.html
+
+[33mcommit 22574cc62df97b738ad631e328f01b435f7b80e4[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Fri Jun 3 21:35:32 2022 +0300
+
+    add many blocks in index.html
+
+[33mcommit 6ad83587ed1215b71067cbf9a844bafe55c9da7f[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Fri Jun 3 16:00:50 2022 +0300
+
+    add same block on index.html
+
+[33mcommit 777e1501f68b9b2211f39e0d523ffe7492a5f757[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Thu Jun 2 17:26:10 2022 +0300
+
+    add footer
+
+[33mcommit 1f97f5ed7cdbcf8502a5c80b7b31286717b4d3e0[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Fri May 20 21:46:46 2022 +0300
+
+    add .header in index.html
+
+[33mcommit f118db8a53b0fb9f9597b00251afab042fbfeaa1[m
+Author: Admin <artyomshevchenkowarmgray@gmail.com>
+Date:   Fri May 20 13:25:49 2022 +0300
+
+    first commit

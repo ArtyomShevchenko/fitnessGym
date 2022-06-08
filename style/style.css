@@ -178,6 +178,74 @@ body {
   min-height: 100vh;
 }
 
+.cards__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  max-height: 1080px;
+  width: 100%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.cards__container .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: var(--white);
+  justify-self: center;
+}
+
+.cards__container .card img {
+  height: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: 50px;
+}
+
+.cards__container .card h3 {
+  color: var(--white);
+}
+
+.cards__container .card p {
+  font-family: "Lora";
+  font-weight: 400;
+  line-height: 1.1rem;
+  font-size: 16px;
+}
+
+.cards__container .card p:first-of-type {
+  margin: 50px 0;
+}
+
+@media (max-width: 800px) {
+  .cards__container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .cards__container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .cards__container .card {
+    max-width: 100%;
+  }
+}
+
 header {
   width: 100%;
   height: 100%;
@@ -405,7 +473,7 @@ header .navigation .menu__container .menu__content .social__container_nav {
   }
 }
 
-.content-container {
+header .content-container {
   max-width: 780px;
   margin: 0 auto;
   padding-top: 295px;
@@ -426,21 +494,27 @@ header .navigation .menu__container .menu__content .social__container_nav {
           justify-content: center;
 }
 
-.content-container h1 {
+header .content-container h1 {
   font-size: 160px;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--white);
 }
 
-.content-container h1 span {
+header .content-container h1 span {
   -webkit-filter: drop-shadow(0 0 10px red);
           filter: drop-shadow(0 0 10px red);
 }
 
-.content-container p {
+@media (max-width: 768px) {
+  header .content-container h1 {
+    font-size: 20vw;
+  }
+}
+
+header .content-container p {
   margin-top: 70px;
 }
 
-.content-container button {
+header .content-container button {
   margin-top: 100px;
 }
 
@@ -463,6 +537,15 @@ main .quoet__container .wrapper p {
   main .quoet__container .wrapper {
     padding: 50px 30px;
   }
+}
+
+main .cards__container_top {
+  background-color: var(--darkGray);
+}
+
+main .cards__container_top .card {
+  text-align: start;
+  max-width: 290px;
 }
 
 main .prioritets__container {
@@ -508,56 +591,6 @@ main .prioritets__container .wrapper p:first-of-type {
   font-size: 19px;
   line-height: 38px;
   max-width: 980px;
-}
-
-main .prioritets__container .card__container {
-  margin-top: 80px;
-  background-color: rgba(0, 0, 0, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
-
-main .prioritets__container .card__container .card {
-  padding: 50px 80px 60px 80px;
-  background-color: #00000080;
-  max-width: 360px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  color: var(--white);
-}
-
-main .prioritets__container .card__container .card h3 {
-  margin: 0;
-}
-
-main .prioritets__container .card__container .card p {
-  font-family: "Lora";
-  font-weight: 400;
-  line-height: 1.1rem;
-  font-size: 16px;
-}
-
-main .prioritets__container .card__container .card p:first-of-type {
-  margin: 50px 0;
 }
 
 main .exactly_we_do__block .wrapper {
@@ -613,88 +646,8 @@ main .exactly_we_do__block .navigation__switch__card ul li:hover {
   cursor: pointer;
 }
 
-main .exactly_we_do__block .card__container {
-  margin-top: 80px;
-  background-color: rgba(0, 0, 0, 0);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
-}
-
-main .exactly_we_do__block .card__container .card {
-  padding: 40px 80px 0px 80px;
-  background-color: #00000080;
-  max-width: 360px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  color: var(--white);
-}
-
-main .exactly_we_do__block .card__container .card img {
-  height: 110px;
-  -o-object-fit: contain;
-     object-fit: contain;
-  position: relative;
-  -webkit-filter: none;
-          filter: none;
-  margin-bottom: 50px;
-}
-
-main .exactly_we_do__block .card__container .card h3 {
-  margin: 0;
-}
-
-main .exactly_we_do__block .card__container .card p {
-  font-family: "Lora";
-  font-weight: 400;
-  line-height: 1.1rem;
-  font-size: 16px;
-}
-
-main .exactly_we_do__block .card__container .card p:first-of-type {
-  margin: 50px 0;
-}
-
-main .exactly_we_do__block .card__container_gallary {
-  gap: 30px;
-}
-
-main .exactly_we_do__block .card__container_gallary .card {
-  width: 48%;
-  max-width: 50%;
-  height: 380px;
-  padding: 0;
-}
-
-main .exactly_we_do__block .card__container_gallary .card img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  padding: 0;
-  margin: 0;
-}
-
 main .exactly_we_do__block .card__container_hidden {
-  display: none;
+  max-height: 0px;
 }
 
 main .tickets__shop {
@@ -849,47 +802,6 @@ main .projects__container .icon {
 main .projects__container .icon img {
   width: 120px;
   height: 120px;
-}
-
-main .card__container {
-  background-color: var(--darkGray);
-}
-
-main .card__container .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: 40px;
-}
-
-main .card__container h3 {
-  color: var(--white);
-  margin-bottom: 30px;
-}
-
-main .card__container .card,
-main .card__container .trips_date {
-  max-width: 300px;
-  font-weight: 500;
-  line-height: 1.8rem;
-  text-align: start;
-}
-
-main .card__container .card > span::before,
-main .card__container .trips_date > span::before {
-  content: "Trips / ";
-}
-
-main .card__container .trips_date {
-  text-align: center;
 }
 
 footer {
