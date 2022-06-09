@@ -40,26 +40,20 @@ outDateTrips.forEach(element => {
 });
 
 // navigation__switch__card
-const switchLinks = document.querySelectorAll(".switch__card__link");
-const switchCards = document.querySelectorAll(".card__container_hidden");
+const linkCards = document.querySelectorAll(".link__to__cards");
+const switchCards = document.querySelectorAll(".cards__hidden");
 
-switchLinks.forEach(element => {
+linkCards.forEach(element => {
     element.dataset.case = String(element.textContent).toLowerCase();
 
     element.addEventListener("click", () => {
         switchCards.forEach(card => {
-            card.classList.add("card__container_hidden");
+            card.classList.add("cards__hidden");
             if(card.dataset.data === element.dataset.case) {
-                card.classList.remove("card__container_hidden");
+                card.classList.remove("cards__hidden");
             }
         })
     })
 });
 
-switchCards[0].classList.remove("card__container_hidden");
-
-
-
-// switchCards[0].style.display = "flex";
-
-console.log(switchCards[0])
+switchCards[0].classList.remove("cards__hidden");
